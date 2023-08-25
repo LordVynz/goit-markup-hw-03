@@ -15,44 +15,138 @@ body {
   color: var(--primary-text);
   font-size: 16px;
   line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 76px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1158px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* logoandfoot */
 .main-link:hover,
-.logo,
-.main,
-.pagelogo,
-.mainpage {
+.footerlogo,
+.main-logo,
+.footer-logo,
+.main-header-logo {
   color: var(--cta);
   cursor: pointer;
   text-decoration: none;
 }
 
-.logo {
-  color: var(--primary);
-  font-family: 'Raleway', sans-serif;
+.main-link {
+  text-decoration: none;
+}
+.link{
+  list-style: none;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+.heading {
+  color: var(--background-white);
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1;
+  width: 496px;
+  padding-top: 120px;
+}
+
+.hero {
+  background-color: var(--background-grey);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 600px;
+}
+
+.features {
+  list-style: none;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.team {
+  flex-direction: column;
+  padding: 120px 40px;
+  background-color: var(--accent-color);
+}
+.member-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task,
+.teams {
+  display: flex;
+  list-style: none;
+  align-content: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.select {
+  display: flex;
+  list-style: none;
+  align-content: center;
+  justify-content: space-between;
+}
+.option {
+  display: flex;
+  list-style: none;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+h2 {
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.main-logo {
+  display: flex;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 800;
-  line-height: 1.5;
-  letter-spacing: 0.54px;
   text-transform: uppercase;
-}
-
-.pagelogo {
-  color: white;
-}
-
-.main-link {
-  color: var(--primary-text);
   text-decoration: none;
+
 }
 
 .link {
-  list-style: none;
+  color: var(--dark) list-style: none;
+  display: flex;
+  align-items: flex-start margin-left: auto;
+  gap: 40px;
 }
 
-.hero,
 .footer,
 title {
   background-color: var(--background-grey);
@@ -61,34 +155,33 @@ title {
   text-decoration: none;
 }
 
-.heading {
-  color: var(--background-white);
-  text-align: center;
-}
 /* orderbtn */
 .order {
   border-radius: 4px;
   background-color: var(--primary);
   color: var(--background-white);
+  border: none;
+  cursor: pointer;
+  padding: 16px 32px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.order:hover {
+.order:hover: {
   background-color: var(--cta);
   color: var(--background-white)
 }
 
-.main {
+.main-logo {
   color: var(--primary);
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
-  font-style: normal;
   font-weight: 800;
   line-height: 1.2;
-  letter-spacing: 0.54px;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
 
-.mainpage {
+.main-header-logo {
   color: var(--background-grey);
   font-family: Raleway;
   font-size: 18px;
@@ -97,18 +190,7 @@ title {
   line-height: 21px;
   letter-spacing: 0.54px;
   text-transform: uppercase;
-}
 
-.team {
-  background-color: var(--accent-color);
-}
-
-.features {
-  display: inline;
-}
-/* portfolio btn*/
-.select {
-  list-style: none;
 }
 
 .selects {
@@ -117,7 +199,7 @@ title {
   background: var(--accent-color);
   display: flex;
   padding: 12px 24px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: var(--primary);
   text-align: center;
@@ -131,4 +213,38 @@ title {
 .selects:hover {
   background-color: var(--primary);
   color: var(--background-white);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background: var(--dark);
+  margin: 0;
+  height: 312px;
+  width: 100%;
+  padding: 0 70px;
+}
+.footer p{
+  font-size: 16px;
+  color: var(--accent-color);
+  width: 264px;
+  line-height: 1.2;
+  margin-top: 16px;
+}
+
+.footerlogo {
+  color: var(--primary);
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+}
+
+.footer-logo {
+  color: white;
 }
