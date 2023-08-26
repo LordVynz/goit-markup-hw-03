@@ -18,20 +18,41 @@ body {
   padding: 0;
 }
 
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 76px;
+  margin: 0;
+
 }
 
+.address{
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-left: auto;
+}
+
+.link{
+  display: flex;
+  align-content: flex-end;
+  gap: 40px;
+}
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   max-width: 1158px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
+}
+
+.section {
+  padding-top: 12px;
+  padding-bottom: 120px;
 }
 
 /* logoandfoot */
@@ -77,7 +98,7 @@ body {
   align-items: center;
   width: 100%;
   margin: 0;
-  
+  margin-left: auto;
 }
 .heading {
   color: var(--background-white);
@@ -88,7 +109,8 @@ body {
   line-height: 1.2;
   font-style: normal;
   width: 496px;
-  letter-spacing: 1.12px
+  letter-spacing: 1.12px;
+  padding-top: 100px; 
 }
 
 .hero {
@@ -98,6 +120,8 @@ body {
   flex-direction: column;
   align-items: center;
   height: 600px;
+  margin: 0;
+  
 }
 
 /* orderbtn */
@@ -128,6 +152,28 @@ body {
   gap: 40px;
 }
 
+.task-title{
+  text-align: center;
+  color: var(--dark);
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.teams-title{
+  text-align: center;
+  color: var(--dark);
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.team {
+  flex-direction: column;
+  padding: 120px 40px;
+  background-color: var(--accent-color);
+  gap: 40px;
+}
 .member {
   display: flex;
   justify-content: center;
@@ -138,20 +184,21 @@ body {
   border: 1px solid var(--accent-cornflower);
   box-shadow:
       0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-      0px 1px 1px 0px rgba(46, 47, 66, 0.16);
+      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   border-radius: 4px;
 }
-
-.member-list{
+  .member-list{
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  margin-bottom: 32px;
 }
 
 .task,
-.teams {
+.teams, .option {
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -159,18 +206,49 @@ body {
   gap: 40px;
 }
 
-.select {
-  display: flex;
-  list-style: none;
-  align-content: center;
-  justify-content: space-between;
-}
 .option {
   display: flex;
-  list-style: none;
-  align-content: center;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.option-items {
+  display: flex;
+  flex-direction: column;
+  background: var(--white, #FFF);
+  width: calc(33.33% - 20px);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+} 
+
+.option-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 20px;
+  border-bottom: 1px solid var(--accent-cornflower);
+  border-left: 1px solid var(--accent-cornflower);
+  border-right: 1px solid var(--accent-cornflower);
+  margin: 0;
+}
+
+.portfolio-select{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+h2 {
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
 }
 
 .main-logo {
@@ -182,6 +260,7 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
+
 }
 
 .link {
@@ -201,6 +280,7 @@ title {
   text-decoration: none;
 }
 
+
 .selects {
   border-radius: 4px;
   border: 1px solid var(--accent-cornflower);
@@ -218,6 +298,22 @@ title {
   list-style: none;
 }
 
+.portfolio-select {
+  display: flex;
+  list-style: none;
+  align-content: center;
+  justify-content: center;
+  gap: 24;
+}
+
+.portfolio-select-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
 .selects:hover {
   background-color: var(--primary);
   color: var(--background-white);
@@ -226,13 +322,13 @@ title {
 .footer {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-content: flex-start;
   flex-direction: column;
   background: var(--dark);
   margin: 0;
   height: 300px;
   width: 100%;
-  padding: 0 200px;
+  padding-left: 190px;
 }
 .footer p{
   font-size: 16px;
